@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  metabase:
+    image: 'metabase/metabase:v0.37.2'
+    ports:
+      - '80:3000'
