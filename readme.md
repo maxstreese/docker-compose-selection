@@ -14,9 +14,7 @@ You will find passwords and keys inside this repository (e.g. [here](redash/env)
 
 ## Deployment Ports
 
-|------------+-------|
 | Deployment | Ports |
-|------------+-------|
+|------------|-------|
 | Metabase   |    80 |
 | Redash     |    80 |
-|------------+-------|
