@@ -12,7 +12,7 @@ This repository will contain outdated versions of said applications because it w
 
 You will find passwords and keys inside this repository (e.g. [here](redash/env)). Rest assured that these are only used inside this repository and not used in any production sytem anywhere. The only reason they are in here is for the docker-compose files to be as self-contained as possible. Therefore if any component of any application in here requires a key/password of sorts I will generate one and put it in the compose and/or env file.
 
-## Deployments
+## Deployment Ports
 
 |------------+-------|
 | Deployment | Ports |
