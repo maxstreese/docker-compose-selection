@@ -4,6 +4,8 @@ services:
     image: 'prestosql/presto:latest'
     ports:
       - '8080:8080'
+    volumes:
+      - './etc:/usr/lib/presto/etc'
   sqlpad:
     image: 'sqlpad/sqlpad:latest'
     ports:
