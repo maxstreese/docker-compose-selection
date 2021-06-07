@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  jupyter:
+    image: 'jupyter/datascience-notebook:ubuntu-20.04'
+    ports:
+      - '80:8888'
+    volumes:
+      - './data:/home/jovyan/work'
