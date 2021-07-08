@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  keycloak:
+    image: 'quay.io/keycloak/keycloak:14.0.0'
+    hostname: 'keycloak'
+    container_name: 'keycloak'
+    ports:
+      - '8080:8080'
+    environment:
+      KEYCLOAK_USER: 'admin'
+      KEYCLOAK_PASSWORD: 'admin'
