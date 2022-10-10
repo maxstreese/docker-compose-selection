@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  loki:
+    image: 'grafana/loki:latest'
+    hostname: 'loki'
+    container_name: 'loki'
+    ports:
+      - '3100:3100'
+
+  promtail:
+    image: 'grafana/promtail:latest'
+    hostname: 'promtail'
+    container_name: 'promtail'
+
+  grafana:
+    image: 'grafana/grafana:latest'
+    hostname: 'grafana'
+    container_name: 'grafana'
+    ports:
+      - '3000:3000'
+
+  prometheus:
+    image: 'prom/prometheus:latest'
+    hostname: 'prometheus'
+    container_name: 'prometheus'
+    ports:
+      - '9090:9090'

@@ -1,7 +1,9 @@
 version: '3.8'
+
 services:
+
   zookeeper:
-    image: 'confluentinc/cp-zookeeper:6.0.1'
+    image: 'confluentinc/cp-zookeeper:7.0.1'
     hostname: 'zookeeper'
     container_name: 'zookeeper'
     ports:
@@ -11,15 +13,15 @@ services:
       ZOOKEEPER_TICK_TIME: 2000
 
   broker:
-    image: 'confluentinc/cp-kafka:6.0.1'
+    image: 'confluentinc/cp-kafka:7.0.1'
     hostname: 'broker'
     container_name: 'broker'
     depends_on:
       - 'zookeeper'
     ports:
-      - "29092:29092"
-      - "9092:9092"
-      - "9101:9101"
+      - '29092:29092'
+      - '9092:9092'
+      - '9101:9101'
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
@@ -33,13 +35,13 @@ services:
       KAFKA_JMX_HOSTNAME: 'localhost'
 
   schema-registry:
-    image: 'confluentinc/cp-schema-registry:6.0.1'
+    image: 'confluentinc/cp-schema-registry:7.0.1'
     hostname: 'schema-registry'
     container_name: 'schema-registry'
     depends_on:
       - 'broker'
     ports:
-      - "8081:8081"
+      - '8081:8081'
     environment:
       SCHEMA_REGISTRY_HOST_NAME: 'schema-registry'
       SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: 'broker:29092'
